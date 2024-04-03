@@ -11,9 +11,8 @@ public static class UserInterfaceFunctions
     Console.WriteLine("Movies Loaded!");
   }
 
-  public static void ViewCurrentAndUpcomingMovies()
+  public static void DisplayCurrentAndUpcomingMovies()
   {
-
     Console.WriteLine($"                                   Title | Runtime");
     Console.WriteLine($"-----------------------------------------+--------");
     foreach (MovieTuple movie in Theatre.Movies)
@@ -22,7 +21,7 @@ public static class UserInterfaceFunctions
     }
   }
 
-  public static void ViewCurrentMovieSchedule()
+  public static void DisplayMovieSchedule()
   {
     // TODO:
     // for each movie, show a list of showtimes

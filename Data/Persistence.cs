@@ -48,6 +48,7 @@ public static class Persistence
 
   public static void PersistShowtimes(List<ShowtimeTuple> showtimes)
   {
+    string filePath = GetBasePath() + "showtimeData.txt";
     // TODO: Actually store showtimes to a file
   }
 

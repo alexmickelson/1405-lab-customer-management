@@ -7,8 +7,8 @@ namespace Shared;
 
 public static class Theatre
 {
-  public static List<MovieTuple> Movies = new();
-  public static List<ShowtimeTuple> Showtimes = new();
+  public static List<MovieTuple> Movies = new List<MovieTuple>();
+  public static List<ShowtimeTuple> Showtimes = new List<ShowtimeTuple>();
 
   public static void AddMovie(string title, int runLengthMinutes)
   {

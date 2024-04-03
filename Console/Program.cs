@@ -20,10 +20,10 @@ while (true)
       UserInterfaceFunctions.LoadMovies();
       break;
     case "2":
-      UserInterfaceFunctions.ViewCurrentAndUpcomingMovies();
+      UserInterfaceFunctions.DisplayCurrentAndUpcomingMovies();
       break;
     case "3":
-      UserInterfaceFunctions.ViewCurrentMovieSchedule();
+      UserInterfaceFunctions.DisplayMovieSchedule();
       break;
     case "4":
       UserInterfaceFunctions.RegisterNewMovie();
