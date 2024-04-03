@@ -38,7 +38,7 @@ public static class Persistence
     }
     return movies;
   }
-  
+
   public static void PersistMovies(List<MovieTuple> movies)
   {
     // convert data into a string representation
@@ -57,16 +57,15 @@ public static class Persistence
 
   public static void PersistShowtimes(List<ShowtimeTuple> showtimes)
   {
-    // List<string> showtimesAsStrings = new List<string>();
-    // foreach(ShowtimeTuple showtime in showtimes)
-    // {
-    //   string showingAsString = $"{showtime.title};{showtime.showtime}";
-    //   showtimesAsStrings.Add(showingAsString);
-    // }
+    List<string> showtimesAsStrings = new List<string>();
+    foreach(ShowtimeTuple showtime in showtimes)
+    {
+      string showingAsString = $"{showtime.title};{showtime.showtime}";
+      showtimesAsStrings.Add(showingAsString);
+    }
 
-    // string filePath = GetBasePath() + "showtimeData.txt";
-    // File.WriteAllLines(filePath, showtimesAsStrings);
-
+    string filePath = GetBasePath() + "showtimeData.txt";
+    File.WriteAllLines(filePath, showtimesAsStrings);
   }
 
 
