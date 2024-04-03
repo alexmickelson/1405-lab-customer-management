@@ -6,7 +6,7 @@ using Shared;
 
 [assembly: CollectionBehavior(DisableTestParallelization = true)]
 namespace Test;
-public class UnitTest1
+public class StorageTests
 {
     [Fact]
     public void CanAddANewMovieToTheatre()

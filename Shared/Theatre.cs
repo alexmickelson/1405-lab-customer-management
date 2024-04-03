@@ -7,8 +7,6 @@ namespace Shared;
 
 public static class Theatre
 {
-
-
   public static List<MovieTuple> Movies = new();
   public static List<ShowtimeTuple> Showtimes = new();
 
@@ -26,24 +24,9 @@ public static class Theatre
     newMovie.runLengthMinutes = runLengthMinutes;
     Movies.Add(newMovie);
   }
+
   public static void AddShowtime(string title, DateTime dateTime)
   {
-    var hasMovie = false;
-    foreach(var movie in Movies)
-    {
-      if(movie.title == title)
-      {
-        hasMovie = true;
-      }
-    }
-    if(!hasMovie)
-      throw new NotImplementedException("Cannot add showtime when movie not added");
-
-    ShowtimeTuple showtime = new ShowtimeTuple();
-    showtime.title = title;
-    showtime.showtime = dateTime;
-
-    Showtimes.Add(showtime);
   }
 
   public static void ResetData()

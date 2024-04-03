@@ -12,9 +12,10 @@ public static class Persistence
 
     List<MovieTuple> movies = new();
 
-    foreach (var rawMovie in File.ReadAllLines(filePath))
+    // for each line in the file, parse out the MovieTuple
+    foreach (string rawMovie in File.ReadAllLines(filePath))
     {
-      var newMovieTuple = new MovieTuple();
+      MovieTuple newMovieTuple = new MovieTuple();
       newMovieTuple.title = rawMovie.Split(";")[0];
       newMovieTuple.runLengthMinutes = int.Parse(rawMovie.Split(";")[1]);
 
@@ -25,18 +26,8 @@ public static class Persistence
 
   public static List<ShowtimeTuple> LoadShowtimes()
   {
-    string filePath = GetBasePath() + "showtimeData.txt";
-    List<ShowtimeTuple> movies = new();
-
-    foreach (var rawMovie in File.ReadAllLines(filePath))
-    {
-      var newShowtimeTuple = new ShowtimeTuple();
-      newShowtimeTuple.title = rawMovie.Split(";")[0];
-      newShowtimeTuple.showtime = DateTime.Parse(rawMovie.Split(";")[1]);
-
-      movies.Add(newShowtimeTuple);
-    }
-    return movies;
+    // TODO: actually read showtime file and convert lines into ShowtimeTuple's
+    return new List<ShowtimeTuple>();
   }
 
   public static void PersistMovies(List<MovieTuple> movies)
@@ -57,18 +48,11 @@ public static class Persistence
 
   public static void PersistShowtimes(List<ShowtimeTuple> showtimes)
   {
-    List<string> showtimesAsStrings = new List<string>();
-    foreach(ShowtimeTuple showtime in showtimes)
-    {
-      string showingAsString = $"{showtime.title};{showtime.showtime}";
-      showtimesAsStrings.Add(showingAsString);
-    }
-
-    string filePath = GetBasePath() + "showtimeData.txt";
-    File.WriteAllLines(filePath, showtimesAsStrings);
+    // TODO: Actually store showtimes to a file
   }
 
 
+  // do not change, makes datafiles discoverable between tests and console
   public static string GetBasePath()
   {
     if (Directory.GetCurrentDirectory().Contains("Console"))

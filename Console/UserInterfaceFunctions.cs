@@ -1,5 +1,6 @@
 global using MovieTuple = (string title, int runLengthMinutes);
 global using ShowtimeTuple = (string title, System.DateTime showtime);
+
 using Shared;
 
 public static class UserInterfaceFunctions
