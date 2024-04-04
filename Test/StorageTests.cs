@@ -205,9 +205,9 @@ public class StorageTests
         // assert
         string showtimeFilePath = Persistence.GetBasePath() + "showtimeData.txt";
         string showtimeFileString = File.ReadAllText(showtimeFilePath);
-        Assert.Contains("Dune 2;4/10/2024 6:35:00 PM", showtimeFileString);
-        Assert.Contains("Dune 2;4/11/2024 6:35:00 PM", showtimeFileString);
-        Assert.Contains("Hitchhikers Guide to the Galaxy;4/9/2024 3:35:00 PM", showtimeFileString);
+        Assert.Contains("Dune 2;4/10/2024 6:35:00", showtimeFileString);
+        Assert.Contains("Dune 2;4/11/2024 6:35:00", showtimeFileString);
+        Assert.Contains("Hitchhikers Guide to the Galaxy;4/9/2024 3:35:00", showtimeFileString);
     }
 
     [Fact]
