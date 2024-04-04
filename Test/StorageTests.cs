@@ -139,7 +139,7 @@ public class StorageTests
             // assert
             Assert.Fail();
         }
-        catch (NotImplementedException e)
+        catch (InvalidOperationException e)
         {
             // assert
             Assert.Equal("Cannot add showtime when movie not added", e.Message);
